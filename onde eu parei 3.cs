@@ -15,33 +15,11 @@ namespace ConsoleApp2
         }
         static void Main(string[] args)
         {
-            //Exercicio - 3: Escreva um programa que apresente o seguinte menu para o usuário:
-
-            string texto = "ESCOLHA UMA OPÇÃO\n" +
-                "_________________________________________________________________________________________________________\n" +
-                "|1 – Cadastrar carro                                                                                    |\n" +
-                "|2 – Consultar carro por ano de fabricação(deverá listar todos os carros fabricados no ano digitado     |\n" +
-                "|pelo usuário)                                                                                          |\n" +
-                "|3 – Consultar carro por modelo(deverá listar todos os carros cujo modelo será digitado pelo usuário)   |\n" +
-                "|4 – Consultar carro por cor(deverá listar todos os carros cuja cor será digitada pelo usuário)         |\n" +
-                "|5 – Exibir todos os carros cadastrados                                                                 |\n" +
-                "|6 – Alterar algum dado de um carro(deverá listar todos os dados de um determinado carro e solicitar    |\n" +
-                "|que o usuário escolha qual campo deseja alterar)                                                       |\n" +
-                "|7 – Excluir um carro(deverá listar todos os dados de um determinado carro e solicitar a confirmação    |\n" +
-                "|para exclusão)                                                                                         |\n" +
-                "|0 – Sair                                                                                               |\n" +
-                "|_______________________________________________________________________________________________________|";
-
-            /*Neste exercício, deverá ser criada uma struct carro que contenha no mínimo os campos modelo, e cor.
-              O usuário deverá cadastrar vários carros até um máximo de 500 registros, portanto deverá ser
-              utilizado um vetor.*/
-
 
             Carro[] carro = new Carro[501];
             int i = 1;
             int u = 1;
             int v = 1;
-
 
             while (true)
             {
@@ -50,7 +28,7 @@ namespace ConsoleApp2
 
                 Console.Clear();
 
-                Console.WriteLine(texto);
+                Console.WriteLine("ESCOLHA UMA OPÇÃO\n\n1 – Cadastrar carro\n2 – Consultar carro por ano de fabricação\n3 – Consultar carro por modelo\n4 – Consultar carro por cor\n5 – Exibir todos os carros cadastrados\n6 – Alterar algum dado de um carro\n7 – Excluir um carro0 – Sair\n");
 
                 Console.Write("\nDigite sua opção: ");
                 opicao = int.Parse(Console.ReadLine());
@@ -155,8 +133,6 @@ namespace ConsoleApp2
                                         Console.ReadLine();
                                     }
                                 }
-
-
                                 Console.WriteLine("digite um ANO: ");
                                 while (true)
                                 {
@@ -173,17 +149,15 @@ namespace ConsoleApp2
                                         Console.WriteLine("digite um ANO valido: ");
                                     }
                                 }
-
+                                //i++;
                                 Console.WriteLine("\n1 - Adicionar outro Carro;\n0 - Voltar ao Menu.\n");
                                 int sair = int.Parse(Console.ReadLine());
                                 Console.Clear();
-
                                 if (sair == 0)
                                 {
                                     u = i;
                                     break;
-                                }
-                                i++;
+                                }                                
                             }
                             Console.Clear();
                             break;
